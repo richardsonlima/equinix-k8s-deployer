@@ -113,7 +113,7 @@ CONFIG_FILE=inventory/mycluster/hosts.yml \
 > **_NOTE:_**  We're using the get-vm-ip.sh script to obtain the KVM virtual machines IP addresses. These should be used to generate a hosts.yml file indicating what should be installed where.
 
 
-### 11. Make life easy by letting kubespray it copy an admin.conf to a host directory which after cluster created it should be used as ~/.kube/config:
+### 11. Let kubespray it copy an admin.conf to a host directory which after cluster created it should be used as ~/.kube/config:
 ```bash
 echo '  vars:' >>  inventory/mycluster/hosts.yml
 echo '    kubeconfig_localhost: true' >>  inventory/mycluster/hosts.yml
@@ -165,10 +165,10 @@ kubectl apply -f https://raw.githubusercontent.com/kubernetes/dashboard/v2.3.1/a
 kubectl proxy --address='0.0.0.0' --port=8001 --accept-hosts='.*'
 ```
 
-Access it from equinix machine using the URL below:
+### Access it from equinix machine using the URL below:
 http://localhost:8001/api/v1/namespaces/kube-system/services/https:kubernetes-dashboard:/proxy/#/login
 
-Access it from local machine using the URL below:
+### To access it from local machine using the URL below:
 http://EQUINIX-MACHINE-PUBLIC-IP:8001/api/v1/namespaces/kube-system/services/https:kubernetes-dashboard:/proxy/#/login
 
 
