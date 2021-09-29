@@ -53,7 +53,7 @@ ssh root@${EQUINIX-MACHINE-PUBLIC-IP}
 
 ### 5. Inside the new Equinix machine run the command below to install some packages needed for our setup:
 ```bash
-sudo apt update && apt-get -y install pip python sshpass bridge-utils qemu-kvm qemu virt-manager net-tools openssh-server mlocate libvirt-clients libvirt-daemon libvirt-daemon-driver-storage-zfs python3-libvirt virt-manager virtinst
+sudo apt update && sudo apt-get -y install pip python sshpass bridge-utils qemu-kvm qemu virt-manager net-tools openssh-server mlocate libvirt-clients libvirt-daemon libvirt-daemon-driver-storage-zfs python3-libvirt virt-manager virtinst
 ```
 
 ### 6. On your Equinix machine clone our kubespray custom project: 
